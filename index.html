@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Prvi zadatak</title>
+  </head>
+  <body class="bodyclass" id="bodyID">
+    <header id="nav">
+      <h1>Moja Prva Web Stranica - dodam neki tekst</h1>
+    </header>
+
+    <p>Dobrodošli na moju prvu web stranicu!</p>
+
+    <div class="container">
+      <button id="toggleButton">Promeni</button>
+  </div>
+
+    <footer id="footer">©2024 Uroš Stojnić</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const nav = document.getElementById('nav');
+        const footer = document.getElementById('footer');
+        const toggleButton = document.getElementById('toggleButton');
+
+    toggleButton.addEventListener('click', () => {
+        const currentColor = nav.style.backgroundColor;
+        const newColor = currentColor === 'red' ? 'blue' : 'red';
+        nav.style.backgroundColor = newColor;
+        footer.style.backgroundColor = newColor;
+    });
+});
+
+    </script>
+
+  </body>
+</html>
